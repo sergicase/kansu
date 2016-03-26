@@ -12,7 +12,7 @@ $ gem install redis
 ### Installation
 
 ```sh
-$ gem install gem 'kansu', :git => 'git://github.com/sergicase/kansu.git'
+$ gem 'kansu', :git => 'git://github.com/sergicase/kansu.git'
 ```
 
 > I'm waiting for publish the gem to https://rubygems.org
@@ -49,6 +49,6 @@ $ kansu.debug("Debug this",[:line => 182, :message => "Some error happen", :reas
 Here I prefer an a Initializer when Rails start and then use as a global.
 
 ```sh
-$ $kansu = Kansu.new(Redis.new,'myredislog',false)
+$ $kansu = Kansu.new(Redis.new,'railslog',false)
 $ $kansu.debug("Debug Rails",[:say => "Hello Rails", :respond => "Hi, Kansu"]
 ```
